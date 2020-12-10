@@ -1,14 +1,26 @@
-INSERT INTO authors (firstName, lastName) values ('Jane', 'Austen');
-INSERT INTO authors (firstName, lastName) values ('Mark', 'Twain');
-INSERT INTO authors (firstName, lastName) values ('Lewis', 'Carroll');
-INSERT INTO authors (firstName, lastName) values ('Andre', 'Asselin');
+INSERT INTO dptable (name) values (Legal);
+INSERT INTO dptable (name) values (Marketing);
+INSERT INTO dptable (name) values (Sales);
+INSERT INTO dptable (name) values (BoardofDirectors);
+INSERT INTO dptable (name) values (R&D);
 
-INSERT INTO books (title, authorId) values ('Pride and Prejudice', 1);
-INSERT INTO books (title, authorId) values ('Emma', 1);
-INSERT INTO books (title, authorId) values ('The Adventures of Tom Sawyer', 2);
-INSERT INTO books (title, authorId) values ('Adventures of Huckleberry Finn', 2);
-INSERT INTO books (title, authorId) values ('Alice''s Adventures in Wonderland', 3);
-INSERT INTO books (title, authorId) values ('Dracula', null);
+INSERT INTO role (title, salary, dptid) values ('Engineer', 1000000, 5);
+INSERT INTO role (title, salary, dptid) values ('Intern', 2);
+INSERT INTO role (title, salary, dptid) values ('Manager', 3);
+INSERT INTO role (title, salary, dptid) values ('Lawyer', 4);
+INSERT INTO role (title, salary, dptid) values ('Marketer', 5);
+INSERT INTO role (title, salary, dptid) values ('CTO', 6);
 
-SELECT * FROM authors;
-SELECT * FROM books;
+
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Jane', 'Austen', 2, 1);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Mark', 'Twain', 1, 1);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Lewis', 'Carroll', 3, );
+INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Andre', 'Asselin', 6, );
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Jane', 'Austen', 2, 1);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Mark', 'Twain', 1, 1);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Lewis', 'Carroll', 3, );
+INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Andre', 'Asselin', 6, );
+
+SELECT * FROM role;
+SELECT * FROM employees;
+SELECT * FROM dptable;
