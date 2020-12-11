@@ -1,25 +1,26 @@
 INSERT INTO dptable (name) values (Legal);
-INSERT INTO dptable (name) values (Marketing);
+INSERT INTO dptable (name) values (Finance);
 INSERT INTO dptable (name) values (Sales);
-INSERT INTO dptable (name) values (BoardofDirectors);
 INSERT INTO dptable (name) values (R&D);
 
-INSERT INTO role (title, salary, dptid) values ('Engineer', 1000000, 5);
-INSERT INTO role (title, salary, dptid) values ('Intern', 2);
-INSERT INTO role (title, salary, dptid) values ('Manager', 3);
-INSERT INTO role (title, salary, dptid) values ('Lawyer', 4);
-INSERT INTO role (title, salary, dptid) values ('Marketer', 5);
-INSERT INTO role (title, salary, dptid) values ('CTO', 6);
+INSERT INTO role (title, salary, dptid) values ('Engineer', 100000, 4);
+INSERT INTO role (title, salary, dptid) values ('Accountant', 80000, 2);
+INSERT INTO role (title, salary, dptid) values ('Manager', 80000, 3);
+INSERT INTO role (title, salary, dptid) values ('Lawyer', 150000, 1);
+INSERT INTO role (title, salary, dptid) values ('Sales Person', 65000, 3);
 
 
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Jane', 'Austen', 2, 1);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Mark', 'Twain', 1, 1);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Lewis', 'Carroll', 3, );
-INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Andre', 'Asselin', 6, );
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Jane', 'Austen', 2, 1);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Mark', 'Twain', 1, 1);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Lewis', 'Carroll', 3, );
-INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Andre', 'Asselin', 6, );
+
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Jane', 'Austen', 1, 1);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Mark', 'Twain', 2, 2);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Lewis', 'Carroll', 3, 3);
+INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Andre', 'Asselin', 4, 4);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('James', 'Dallas', 5, 3);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Michelle', 'Thompson', 1, 1);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Leroy', 'Jenkins', 2, 1);
+INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Riley', 'Reid', 5, 3);
+INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Donald', 'Glover', 2, 2);
+INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Alexis', 'Texas', 5, 3);
 
 SELECT * FROM role;
 SELECT * FROM employees;
