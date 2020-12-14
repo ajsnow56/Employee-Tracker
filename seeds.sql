@@ -11,17 +11,17 @@ INSERT INTO role (title, salary, dptid) values ('Sales Person', 65000, 3);
 
 
 
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Jane', 'Austen', 1, 1);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Mark', 'Twain', 2, 2);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Lewis', 'Carroll', 3, 3);
-INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Andre', 'Asselin', 4, 4);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('James', 'Dallas', 5, 3);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Michelle', 'Thompson', 1, 1);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Leroy', 'Jenkins', 2, 1);
-INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Riley', 'Reid', 5, 3);
-INSERT INTO employees (firstName, lastName, roleid, mngrid) values ('Donald', 'Glover', 2, 2);
-INSERT INTO employees (firstName, lastName, roleid, mngrdi) values ('Alexis', 'Texas', 5, 3);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Jane', 'Austen', 1, 1);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Mark', 'Twain', 2, 2);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Lewis', 'Carroll', 3, 3);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Andre', 'Asselin', 4, 4);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('James', 'Dallas', 5, 3);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Michelle', 'Thompson', 1, 1);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Leroy', 'Jenkins', 2, 1);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Riley', 'Reid', 5, 3);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Donald', 'Glover', 2, 2);
+INSERT INTO employee (firstName, lastName, roleid, mngrid) values ('Alexis', 'Texas', 5, 3);
 
 SELECT * FROM role;
-SELECT * FROM employees;
+SELECT * FROM employee;
 SELECT * FROM dptable;
