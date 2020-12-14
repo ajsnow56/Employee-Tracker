@@ -2,7 +2,6 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 const util = require("util");
-const { Readable } = require("stream");
 // port and mysql connection created
 var PORT = process.env.PORT || 3056;;
 const connection = mysql.createConnection({
@@ -124,17 +123,18 @@ function addRoles() {
 // It also utilizes alias to set the employee table as e and m to be the manager id in our employee table.
 // From there the left and inner joins are introduced.
   async function viewEmployees() {
-    const query = `select  
+    const query =  `select  
     dptable.name AS 'Department',
     role.title AS 'Job Title',
     IFNULL(CONCAT(m.firstName, ' ', m.lastName),
     'Top Manager') AS 'Manager',
-    FROM employee e
     CONCAT(e.firstName,' ',e.lastName) AS 'Direct report', 
     role.salary AS 'Employee Salary'
+    FROM employee e
     LEFT JOIN employee m on m.id = e.mngrid
     INNER JOIN role on e.roleid = role.id
-    INNER JOIN dptable on role.dptid = dptable.id`
+    INNER JOIN dptable on role.dptid = dptable.id
+    ORDER BY manager DESC`
   const data = await connection.query(query);
   console.table(data);
   init();
@@ -143,7 +143,6 @@ function addRoles() {
  async function viewAllRoles() {
    const query = "SELECT * FROM role";
    const data = await connection.query(query);
-   if (err) throw err;
    console.table(data);
    init();
     };
@@ -151,7 +150,6 @@ function addRoles() {
   async function viewAllDepartments() {
     const query = "SELECT * FROM dptable";
     const data = await connection.query(query);
-    if (err) throw err;
     console.table(data);
     init();
     };  
